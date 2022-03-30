@@ -30,13 +30,17 @@ namespace StackAndQueue
                 sizeOfStack++;
             }
         }
-        public void display()
+        public void peak()
         {
-            Node temp = top;
-            while (temp != null)
+            Console.WriteLine(top.data);
+        }
+        public void pop()
+        {
+            if (sizeOfStack == 0)
+                Console.WriteLine("Stack Underflow");
+            else
             {
-                Console.WriteLine(temp.data);
-                temp = temp.next;
+                top = top.next;
                 sizeOfStack--;
             }
         }
